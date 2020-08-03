@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'input_phone.dart';
+import '../../Utils/navigation_utils.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -79,8 +81,9 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 FlatButton(
-                  onPressed: () => {
-                    print("点击手机号登录")
+                  onPressed: () {
+                    NavigationUtils.jumpToInputPhone(context);
+                    print("点击手机号登录");
                   },
                   child: Text(
                     "手机号登录",

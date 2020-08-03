@@ -6,7 +6,8 @@ class Routers {
   static String root = "/"; // 根视图
   static String login = "login"; // 登录
   static String register = "register"; // 注册
-  static String verificationCode = "verificationCode"; // 验证码
+  static String inputPhone = "inputPhone"; // 输入手机号
+  static String verifyCode = "VerifyCode"; // 验证码
   
   static String home = "home"; // 首页
   // 注册所有录用
@@ -16,7 +17,11 @@ class Routers {
 
     router.define(login, handler: loginHandle);
 
+    router.define(inputPhone, handler: inputPhoneHandle);
+
     router.define(home, handler: homeHandle);
+
+    router.define(verifyCode, handler: verifyCodeHandle);
 
     router.notFoundHandler = notMachHandle;
 
