@@ -8,6 +8,8 @@ class Routers {
   static String register = "register"; // 注册
   static String inputPhone = "inputPhone"; // 输入手机号
   static String verifyCode = "VerifyCode"; // 验证码
+
+  static String search = "search"; // 验证码
   
   static String home = "home"; // 首页
   // 注册所有录用
@@ -22,6 +24,8 @@ class Routers {
     router.define(home, handler: homeHandle);
 
     router.define(verifyCode, handler: verifyCodeHandle);
+
+    router.define(search, handler: searchHandle);
 
     router.notFoundHandler = notMachHandle;
 

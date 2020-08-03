@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import '../../widgets/common/toast_utils.dart';
+import '../../utils/navigation_utils.dart';
 class VerifyCode extends StatefulWidget {
   
   String phone;
@@ -13,7 +14,6 @@ class VerifyCode extends StatefulWidget {
 class _VerifyCodeState extends State<VerifyCode> {
  
  String _phone;
-
 
   @override
   Widget build(BuildContext context) {
@@ -38,12 +38,15 @@ class _VerifyCodeState extends State<VerifyCode> {
                     autofocus: true,
                     maxLength: 4,
                     onChanged: (text) {
-                      print(text);
+                      print("输入验证码: ${text}");
+                      if (text.trim().length == 4) {
+                        checkCode(text.trim());
+                      }
                     },
                   ),
                   FlatButton(
                     onPressed: (){
-
+                      ToastUtlis.showText("已经重新发送验证码", context);
                     },
                     child: Text(
                       "重新获取",
@@ -58,4 +61,14 @@ class _VerifyCodeState extends State<VerifyCode> {
         ),
     );
   }
+
+  checkCode(String code) {
+    if (code == "6666") {
+      ToastUtlis.showText("验证成功", context);
+      NavigationUtils.jumpToHomePage(context);
+    } else {
+      ToastUtlis.showText("验证失败", context);
+    }
+  }
+
 }

@@ -15,7 +15,7 @@ class NavigationUtils {
   }
 
   static jumpToInputPhone(BuildContext context) {
-    Application.router.navigateTo(context, Routers.inputPhone, transition: TransitionType.inFromRight);
+    Application.router.navigateTo(context, Routers.inputPhone, transition: TransitionType.inFromRight, replace: true);
   }
 
   static jumpToVerifyCode(BuildContext context, String phone) {
@@ -23,5 +23,8 @@ class NavigationUtils {
     Application.router.navigateTo(context, path, transition: TransitionType.inFromRight);
   }
 
+ static jumpToSearch(BuildContext context) {
+    Application.router.navigateTo(context, Routers.search, transition: TransitionType.inFromRight);
+  }
 
 }

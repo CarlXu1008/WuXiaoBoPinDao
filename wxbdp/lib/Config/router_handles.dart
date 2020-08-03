@@ -5,7 +5,7 @@ import '../pages/home/home.dart';
 import '../pages/login/login_page.dart';
 import '../pages/login/input_phone.dart';
 import '../pages/login/verify_code.dart';
-
+import '../pages/search/search_page.dart';
 
 // 未匹配到处理
 var notMachHandle = Handler(handlerFunc: (BuildContext context, Map<String, List<String>> parameters){
@@ -36,4 +36,9 @@ var verifyCodeHandle = Handler(handlerFunc: (BuildContext context, Map<String, L
 
 var homeHandle = Handler(handlerFunc: (BuildContext context, Map<String, List<String>> parameters){
   return HomePage();
+});
+
+
+var searchHandle = Handler(handlerFunc: (BuildContext context, Map<String, List<String>> parameters){
+  return SearchPage();
 });

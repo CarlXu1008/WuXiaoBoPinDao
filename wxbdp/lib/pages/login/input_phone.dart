@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../login/verify_code.dart';
-import '../../Utils/navigation_utils.dart';
+import '../../utils/navigation_utils.dart';
+import '../../widgets/common/toast_utils.dart';
 
 class InputPhone extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _InputPhoneState extends State<InputPhone> {
       print(_inputPhoneController.text);
     });
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +68,7 @@ class _InputPhoneState extends State<InputPhone> {
                         onPressed: (){
                           print("跳转到获取验证码页面");
                           if (_inputPhoneController.text.length < 11) {
-                            print("输入手机号格式不对");
+                            ToastUtlis.showText("输入手机号格式不对", context);
                           } else {
                             NavigationUtils.jumpToVerifyCode(context, _inputPhoneController.text);
                           }
