@@ -37,6 +37,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                   TextField(
                     autofocus: true,
                     maxLength: 4,
+                    keyboardType: TextInputType.number,
                     onChanged: (text) {
                       print("输入验证码: ${text}");
                       if (text.trim().length == 4) {
