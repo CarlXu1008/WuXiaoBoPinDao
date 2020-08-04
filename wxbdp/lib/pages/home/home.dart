@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:wxbdp/widgets/home/good_title.dart';
 import '../../widgets/home/search.dart';
 import '../../widgets/home/banner.dart';
 import '../../widgets/home/category_nav.dart';
 import '../../widgets/home/channel.dart';
+import '../../widgets/home/good_list.dart';
+import '../../widgets/home/good_grid.dart';
 import '../../widgets/home/good_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (BuildContext content, int index){
               return getHomeView(index);
             },
-            itemCount: 5,
+            itemCount: 8,
         ),
     );
   }
@@ -36,6 +39,11 @@ class _HomePageState extends State<HomePage> {
         return ChannelView();
       case 4:
         return GoodListView();
+      case 5:
+        return Column(children: <Widget>[
+          GoodTitleView(),
+          GoodsGridView()
+        ]);
     }
     return Text("");
   }
