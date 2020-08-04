@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/home/search.dart';
 import '../../widgets/home/banner.dart';
 import '../../widgets/home/category_nav.dart';
+import '../../widgets/home/channel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (BuildContext content, int index){
               return getHomeView(index);
             },
-            itemCount: 3,
+            itemCount: 5,
         ),
     );
   }
@@ -29,8 +30,10 @@ class _HomePageState extends State<HomePage> {
         return BannerView();
       case 2:
         return CategoryNavView();
+      case 3:
+        return ChannelView();
     }
-    return Text("未匹配到组件");
+    return Text("");
   }
 
 }

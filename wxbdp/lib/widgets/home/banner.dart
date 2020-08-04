@@ -17,12 +17,16 @@ class _BannerViewState extends State<BannerView> {
     return Container(
        width: double.infinity,
        height: 160,
+       margin: const EdgeInsets.fromLTRB(20, 8, 20, 8),
        child: Swiper (
           itemCount: 4,
           itemBuilder: (BuildContext context,int index) {
             return Image.asset(_imageNames[index], width: double.infinity, height: double.infinity,fit: BoxFit.fill);
           },
           pagination: new SwiperPagination(),
+          onTap: (index) {
+            print("点击了第$index个轮播图");
+          },
          ),
     );
   }
