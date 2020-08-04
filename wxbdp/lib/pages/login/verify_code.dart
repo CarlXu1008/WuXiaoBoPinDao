@@ -3,7 +3,7 @@ import '../../widgets/common/toast_utils.dart';
 import '../../utils/navigation_utils.dart';
 class VerifyCode extends StatefulWidget {
   
-  String phone;
+  final String phone;
 
   VerifyCode(this.phone);
 
@@ -39,7 +39,7 @@ class _VerifyCodeState extends State<VerifyCode> {
                     maxLength: 4,
                     keyboardType: TextInputType.number,
                     onChanged: (text) {
-                      print("输入验证码: ${text}");
+                      // print("输入验证码: ${text}");
                       if (text.trim().length == 4) {
                         checkCode(text.trim());
                       }
@@ -73,3 +73,5 @@ class _VerifyCodeState extends State<VerifyCode> {
   }
 
 }
+
+

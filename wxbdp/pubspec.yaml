@@ -56,6 +56,10 @@ flutter:
   assets:
   -  images/login.png
   -  images/wxbpd_app.png
+  -  images/banner_1.png
+  -  images/banner_2.png
+  -  images/banner_3.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

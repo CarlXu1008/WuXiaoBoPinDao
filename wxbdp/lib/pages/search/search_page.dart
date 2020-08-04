@@ -11,7 +11,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("输入手机号", style: TextStyle(color: Color(0xFF000000))),
+          title: Text("搜索", style: TextStyle(color: Color(0xFF000000))),
           backgroundColor: Color(0xFFFFFFFF),
           iconTheme: IconThemeData(color: Color(0xFF000000)),
         ),

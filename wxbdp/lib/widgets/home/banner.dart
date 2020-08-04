@@ -9,6 +9,9 @@ class BannerView extends StatefulWidget {
 }
 
 class _BannerViewState extends State<BannerView> {
+
+  var _imageNames = ["images/banner_1.png", "images/banner_2.png", "images/banner_3.png", "images/banner_2.png"];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +20,7 @@ class _BannerViewState extends State<BannerView> {
        child: Swiper (
           itemCount: 4,
           itemBuilder: (BuildContext context,int index) {
-            return new Image.network("https://baike.baidu.com/pic/%E6%9D%8E%E5%BD%A6%E5%AE%8F/125160/1/2f738bd4b31c8701928251782d7f9e2f0708ff7c?fr=lemma&ct=single");
+            return Image.asset(_imageNames[index], width: double.infinity, height: double.infinity,fit: BoxFit.fill);
           },
           pagination: new SwiperPagination(),
          ),
