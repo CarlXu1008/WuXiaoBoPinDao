@@ -3,6 +3,7 @@ import '../../widgets/home/search.dart';
 import '../../widgets/home/banner.dart';
 import '../../widgets/home/category_nav.dart';
 import '../../widgets/home/channel.dart';
+import '../../widgets/home/good_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF6F6F7),
       body: ListView.builder(
             itemBuilder: (BuildContext content, int index){
               return getHomeView(index);
@@ -32,6 +34,8 @@ class _HomePageState extends State<HomePage> {
         return CategoryNavView();
       case 3:
         return ChannelView();
+      case 4:
+        return GoodListView();
     }
     return Text("");
   }
