@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../Utils/navigation_utils.dart';
+import '../../utils/shared_preferences_util.dart';
 
 class LauchPage extends StatefulWidget {
   @override
@@ -12,7 +13,13 @@ class _LauchPageState extends State<LauchPage> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 3), () {
-      NavigationUtils.jumpToLoginPage(context);
+      SharePreferencesUtils.getIsLogin().then((isLogin) => {
+        if (isLogin == 1) {
+          NavigationUtils.jumpToHomePage(context)
+        } else {
+          NavigationUtils.jumpToLoginPage(context)
+        }
+      });
     });
   }
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../widgets/common/toast_utils.dart';
 import '../../utils/navigation_utils.dart';
+import '../../utils/shared_preferences_util.dart';
+
 class VerifyCode extends StatefulWidget {
   
   final String phone;
@@ -66,6 +68,7 @@ class _VerifyCodeState extends State<VerifyCode> {
   checkCode(String code) {
     if (code == "6666") {
       ToastUtlis.showText("验证成功", context);
+      SharePreferencesUtils.setIsLogin(1);
       NavigationUtils.jumpToHomePage(context);
     } else {
       ToastUtlis.showText("验证失败", context);
