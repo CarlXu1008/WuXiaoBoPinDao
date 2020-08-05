@@ -10,6 +10,8 @@ import '../../widgets/home/knowledge_answer.dart';
 import '../../widgets/home/knowledge_subject.dart';
 import '../../widgets/home/bookshelf_grid.dart';
 import '../../widgets/home/bookshelf_list.dart';
+import '../../widgets/home/day_sign.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -25,7 +27,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (BuildContext content, int index){
               return getHomeView(index);
             },
-            itemCount: 10,
+            itemCount: 12,
         ),
     );
   }
@@ -75,6 +77,8 @@ class _HomePageState extends State<HomePage> {
             BookShelfListView()
           ],
         );
+     case  10:
+        return DaySignView();
     }
     return Text("");
   }

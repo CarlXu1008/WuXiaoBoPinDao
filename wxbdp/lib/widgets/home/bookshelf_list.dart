@@ -25,7 +25,7 @@ class _BookShelfListViewState extends State<BookShelfListView> {
   getBookShelfListItemView() {
     return InkWell(
       child: Card(
-        margin: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+        margin: const EdgeInsets.fromLTRB(20, 6, 20, 6),
         child: Row(
           children: <Widget>[
             ClipRRect(

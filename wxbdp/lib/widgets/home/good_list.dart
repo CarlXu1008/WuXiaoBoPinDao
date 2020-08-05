@@ -17,10 +17,10 @@ class _GoodListViewState extends State<GoodListView> {
       physics: new NeverScrollableScrollPhysics(),
       itemBuilder: (BuildContext content, int index) {
         if (index == 0) {
-          return getHeadTitleView();
+          return getGoodListHeadTitleView();
         }
         return InkWell(
-          child: getGoodItemView(),
+          child: getGoodListItemView(),
           onTap: () {
             print("点击第$index个知识商品列表组件");
           },
@@ -31,7 +31,7 @@ class _GoodListViewState extends State<GoodListView> {
     );
   }
 
-  getHeadTitleView() {
+  getGoodListHeadTitleView() {
     return Container(
       padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
       child: Row(
@@ -63,7 +63,7 @@ class _GoodListViewState extends State<GoodListView> {
     );
   }
 
-  getGoodItemView() {
+  getGoodListItemView() {
     const double columnWidth = 200;
     return Card(
       margin: const EdgeInsets.fromLTRB(16, 6, 16, 6),

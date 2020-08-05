@@ -21,7 +21,7 @@ class _GoodsGridViewState extends State<GoodsGridView> {
         ), 
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
-            child: getItemView(),
+            child: getGoodGridItemView(),
             onTap: () {
               print("点击知识商品宫格组件第$index个");
             },
@@ -35,7 +35,7 @@ class _GoodsGridViewState extends State<GoodsGridView> {
 
   }
 
-  getItemView() {
+  getGoodGridItemView() {
     return Card(
       margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
       child: Column(
