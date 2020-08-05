@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../Utils/navigation_utils.dart';
 
+// 搜索组件
 class SearchView extends StatelessWidget {
   const SearchView({Key key}) : super(key: key);
 

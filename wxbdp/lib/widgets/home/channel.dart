@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../common/gradient_button.dart';
 
+// 每天听见吴晓波组件
 class ChannelView extends StatefulWidget {
   ChannelView({Key key}) : super(key: key);
 
@@ -59,7 +60,7 @@ class _ChannelViewState extends State<ChannelView> {
                   ),
                 ),
                 Padding(padding: EdgeInsets.only(left: 4)),
-                // Icon(Icons.backup)
+                Image.asset("images/right_arrow.png", width: 12, height: 12,)
               ],
             ),
             Padding(padding: EdgeInsets.only(top: 6)),

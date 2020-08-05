@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 知识商品宫格组件
 class GoodsGridView extends StatefulWidget {
   GoodsGridView({Key key}) : super(key: key);
 

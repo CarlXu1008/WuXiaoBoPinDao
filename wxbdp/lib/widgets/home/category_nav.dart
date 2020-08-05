@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 分类导航组件
 class CategoryNavView extends StatefulWidget {
   CategoryNavView({Key key}) : super(key: key);
 

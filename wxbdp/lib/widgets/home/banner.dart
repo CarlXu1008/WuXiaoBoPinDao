@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
+// 轮播图组件
 class BannerView extends StatefulWidget {
   BannerView({Key key}) : super(key: key);
 

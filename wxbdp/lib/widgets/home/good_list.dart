@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 知识商品列表组件
 class GoodListView extends StatefulWidget {
   GoodListView({Key key}) : super(key: key);
 

@@ -6,7 +6,9 @@ import '../../widgets/home/category_nav.dart';
 import '../../widgets/home/channel.dart';
 import '../../widgets/home/good_list.dart';
 import '../../widgets/home/good_grid.dart';
-import '../../widgets/home/good_list.dart';
+import '../../widgets/home/knowledge_answer.dart';
+import '../../widgets/home/knowledge_subject.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -41,9 +43,23 @@ class _HomePageState extends State<HomePage> {
         return GoodListView();
       case 5:
         return Column(children: <Widget>[
-          GoodTitleView(),
+          GoodTitleView("知识商品宫格组件"),
           GoodsGridView()
         ]);
+      case 6:
+        return Column(
+          children: <Widget>[
+            GoodTitleView("知识问答组件"),
+            KnowledgeAnswer()
+          ],
+        );
+      case 7:
+        return Column(
+          children: <Widget>[
+            GoodTitleView("知识专题组件"),
+            KnowledgeSubject()
+          ],
+        );
     }
     return Text("");
   }

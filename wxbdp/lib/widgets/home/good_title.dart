@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-
+// 知识商品标题组件
 class GoodTitleView extends StatefulWidget {
-  GoodTitleView({Key key}) : super(key: key);
+  
+  final String title;
 
+  GoodTitleView(this.title);
 
   @override
   _GoodTitleViewState createState() => _GoodTitleViewState();
@@ -11,20 +13,24 @@ class GoodTitleView extends StatefulWidget {
 
 
 class _GoodTitleViewState extends State<GoodTitleView> {
+
+  String _title;
+
   @override
   Widget build(BuildContext context) {
+    _title = widget.title;
     return getHeadTitleView();
   }
 
   getHeadTitleView() {
     return Container(
-      padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+      padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
-            "知识商品宫格组件",
+            _title,
             style: TextStyle( 
               color: Color(0xFF252831),
               fontSize: 18,
