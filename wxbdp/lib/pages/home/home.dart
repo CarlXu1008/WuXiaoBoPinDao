@@ -8,7 +8,8 @@ import '../../widgets/home/good_list.dart';
 import '../../widgets/home/good_grid.dart';
 import '../../widgets/home/knowledge_answer.dart';
 import '../../widgets/home/knowledge_subject.dart';
-
+import '../../widgets/home/bookshelf_grid.dart';
+import '../../widgets/home/bookshelf_list.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (BuildContext content, int index){
               return getHomeView(index);
             },
-            itemCount: 8,
+            itemCount: 10,
         ),
     );
   }
@@ -58,6 +59,20 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             GoodTitleView("知识专题组件"),
             KnowledgeSubject()
+          ],
+        );
+     case 8:
+        return Column(
+          children: <Widget>[
+            GoodTitleView("书架宫格组件"),
+            BookShelfGridView()
+          ],
+        );
+     case 9:
+        return Column(
+          children: <Widget>[
+            GoodTitleView("书架列表组件"),
+            BookShelfListView()
           ],
         );
     }

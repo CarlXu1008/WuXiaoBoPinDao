@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// 知识卡片问答组件
 class KnowledgeAnswer extends StatefulWidget {
   KnowledgeAnswer({Key key}) : super(key: key);
 
