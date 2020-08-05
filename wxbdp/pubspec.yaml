@@ -60,7 +60,9 @@ flutter:
   -  images/banner_2.png
   -  images/banner_3.png
   -  images/right_arrow.png
-
+  -  images/xiaobo_fm.png
+  -  images/xiaoba_fm_play.png
+  -  images/xiaoba_fm_one_play.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

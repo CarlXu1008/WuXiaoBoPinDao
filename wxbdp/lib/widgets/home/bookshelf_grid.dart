@@ -12,7 +12,7 @@ class _BookShelfGridViewState extends State<BookShelfGridView> {
     return Container(
       width: double.infinity,
       height: 450, // Warnning: 不给高度会渲染异常!!!
-      margin: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+      margin: const EdgeInsets.fromLTRB(20, 8, 20, 8),
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
