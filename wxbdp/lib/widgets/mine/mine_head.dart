@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../Utils/navigation_utils.dart';
 
 // 我的页面 - 头部视图
 class MineHeadView extends StatefulWidget {
@@ -36,6 +37,7 @@ class _MineHeadViewState extends State<MineHeadView> {
                   child: Image.asset("images/mine_head.png", width: 48, height: 48,fit: BoxFit.fill),
                   onTap: () {
                     print("点击头像");
+                    NavigationUtils.jumpToUserInfoPage(context);
                   },
                 ),
               ),
@@ -59,12 +61,14 @@ class _MineHeadViewState extends State<MineHeadView> {
                 icon: Image.asset("images/mine_head_setting.png", width: 24, height: 24,), 
                 onPressed: (){
                   print("点击设置按钮");
+                  NavigationUtils.jumpToSettingPage(context);
                 }
               ),
               IconButton(
                 icon: Image.asset("images/mine_head_email.png", width: 24, height: 24,), 
                 onPressed: (){
                   print("点击消息按钮");
+                  NavigationUtils.jumpToMessagePage(context);
                 }
               ),
             ],
@@ -143,6 +147,7 @@ class _MineHeadViewState extends State<MineHeadView> {
                     ),
                     onTap: () {
                       print("点击了开通超级会员按钮");
+                      NavigationUtils.jumpToSuperVipBriedfPage(context);
                     },
                   ),
                   

@@ -1,6 +1,4 @@
 
-import 'package:wxbdp/widgets/mine/mine_cell.dart';
-
 class MineCellModel {
   int id;
   String iconName;

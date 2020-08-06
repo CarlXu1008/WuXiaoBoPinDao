@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../model/mine_cell_model.dart';
+import '../../utils/navigation_utils.dart';
+
 
 class MineCell extends StatefulWidget {
 
@@ -70,6 +72,7 @@ class _MineCellState extends State<MineCell> {
         ),
         onTap: () {
           print("点击我的cell: ${_model.title}");
+          clickToJump();
         },
       )
     );
@@ -98,7 +101,36 @@ class _MineCellState extends State<MineCell> {
     } else {
       return SizedBox(width: 2);
     }
-    
+  }
+
+  clickToJump() {
+    switch (_model.title) {
+      case "波豆余额":
+        NavigationUtils.jumpToWalletPage(context);
+        break;
+      case "邀请好友":
+        NavigationUtils.jumpToInviteFriendPage(context);
+        break;
+      case "我的收藏":
+        NavigationUtils.jumpToMyCollectionPage(context);
+        break;
+      case "下载列表":
+        NavigationUtils.jumpToDownloadListPage(context);
+        break;
+      case "优惠劵":
+        NavigationUtils.jumpToCoupomPage(context);
+        break;
+      case "兑换码":
+        NavigationUtils.jumpToReecodePage(context);
+        break;
+      case "购买记录":
+        NavigationUtils.jumpToPurchasedPage(context);
+        break;
+      case "联名会员":
+        NavigationUtils.jumpToMembershipPage(context);
+        break;
+      default:
+    }
   }
 
 }
