@@ -11,7 +11,9 @@ class Routers {
 
   static String search = "search"; // 验证码
   
-  static String home = "home"; // 首页
+  // static String home = "home"; // 首页
+  static String main = "main"; // 首页
+
   // 注册所有录用
   static void configureRoutes(Router router) {
 
@@ -21,7 +23,7 @@ class Routers {
 
     router.define(inputPhone, handler: inputPhoneHandle);
 
-    router.define(home, handler: homeHandle);
+    router.define(main, handler: mainHandle);
 
     router.define(verifyCode, handler: verifyCodeHandle);
 

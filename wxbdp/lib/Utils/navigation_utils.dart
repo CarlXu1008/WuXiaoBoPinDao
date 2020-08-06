@@ -10,8 +10,8 @@ class NavigationUtils {
     Application.router.navigateTo(context, Routers.login, transition: TransitionType.inFromRight);
   }
 
-  static jumpToHomePage(BuildContext context) {
-    Application.router.navigateTo(context, Routers.home, transition: TransitionType.inFromRight);
+  static jumpToMainPage(BuildContext context) {
+    Application.router.navigateTo(context, Routers.main, transition: TransitionType.inFromRight);
   }
 
   static jumpToInputPhone(BuildContext context) {

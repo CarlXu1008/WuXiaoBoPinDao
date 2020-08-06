@@ -15,7 +15,7 @@ class _LauchPageState extends State<LauchPage> {
     Future.delayed(Duration(seconds: 3), () {
       SharePreferencesUtils.getIsLogin().then((isLogin) => {
         if (isLogin == 1) {
-          NavigationUtils.jumpToHomePage(context)
+          NavigationUtils.jumpToMainPage(context)
         } else {
           NavigationUtils.jumpToLoginPage(context)
         }

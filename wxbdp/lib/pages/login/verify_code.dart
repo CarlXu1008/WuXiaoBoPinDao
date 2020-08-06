@@ -69,7 +69,7 @@ class _VerifyCodeState extends State<VerifyCode> {
     if (code == "6666") {
       ToastUtlis.showText("验证成功", context);
       SharePreferencesUtils.setIsLogin(1);
-      NavigationUtils.jumpToHomePage(context);
+      NavigationUtils.jumpToMainPage(context);
     } else {
       ToastUtlis.showText("验证失败", context);
     }

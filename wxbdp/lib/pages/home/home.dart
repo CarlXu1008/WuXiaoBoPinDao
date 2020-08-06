@@ -14,21 +14,39 @@ import '../../widgets/home/day_sign.dart';
 import '../../widgets/home/xiaoba_fm.dart';
 
 class HomePage extends StatefulWidget {
+
+  final String microPageId;
+
+  HomePage(this.microPageId);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
+  List<Widget> _components = List();
+  String _microPageId;
+
+  @override
+  void initState() {
+    super.initState();
+    _microPageId = widget.microPageId;
+    if (_microPageId == "coursePage") {
+      _components = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((e) => getHomeView(e)).toList();
+    } else {
+      _components = [10, 11, 4, 5].map((e) => getHomeView(e)).toList();
+    }
+    print(_components.length);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF6F6F7),
-      body: ListView.builder(
-            itemBuilder: (BuildContext content, int index){
-              return getHomeView(index);
-            },
-            itemCount: 12,
-        ),
+      body: ListView(
+        children: _components,
+      )
     );
   }
 
