@@ -63,6 +63,23 @@ flutter:
   -  images/xiaobo_fm.png
   -  images/xiaoba_fm_play.png
   -  images/xiaoba_fm_one_play.png
+  
+  -  images/mine_head_bg.png
+  -  images/mine_head.png
+  -  images/mine_head_setting.png
+  -  images/mine_head_email.png
+  -  images/mine_right_arrow.png
+  -  images/mine_coupon.png
+  -  images/mine_invite_friend.png
+  -  images/mine_download.png
+  -  images/mine_collection.png
+  -  images/mine_member.png
+  -  images/mine_purchase.png
+  -  images/mine_reecode.png
+  -  images/mine_bodou.png
+
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
