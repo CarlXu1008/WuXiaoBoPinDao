@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../Utils/navigation_utils.dart';
+import '../../service/login_service.dart';
 
 // 搜索组件
 class SearchView extends StatelessWidget {
@@ -26,11 +27,40 @@ class SearchView extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-               NavigationUtils.jumpToSearch(context);
+              onTapSearch(context);
              }
           )
         ],
       )
     );
   }
+
+  onTapSearch(BuildContext context) {
+    NavigationUtils.jumpToSearch(context);
+
+    // LoginService service = LoginService();
+    
+    // service.sendVertiyCode("18689209256", (data) => {
+    //   print("请求结束")
+    // });
+
+    // service.checkPhone("18689209256", (data) => {
+    //   print("请求结束")
+    // });
+
+    // service.getPersonMessage("A9ft8GrhiRFaN3DU5rhKba2x6FX02FBWR4qijSNiefod7bBSUjf6jyDKOqcPScZF", (data) => {
+
+    // });
+
+    // service.getUserSvipInfo("", (data) => {
+
+    // });
+
+    // service.getShopPage("app_second", (data) => {
+
+    // });
+
+  }
+
+
 }
