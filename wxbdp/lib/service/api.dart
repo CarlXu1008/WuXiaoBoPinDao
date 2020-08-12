@@ -29,18 +29,18 @@ class Api {
   static const base_Url = "https://app-server.890.wasu.tv/";
 
   // 登录模块
-  static const verify_code = "api/verify_code";
-  static const check_phone = "api/check_phone";
-  static const send_msg = "api/send_msg";
+  static const verify_code = Api.base_Url +  "api/verify_code";
+  static const check_phone = Api.base_Url + "api/check_phone";
+  static const send_msg = Api.base_Url + "api/send_msg";
 
 
   // 用户信息相关
-  static const get_person_message = "api/get_person_message/1.0.1";
-  static const user_svip_info = "third/xiaoe_request/xe.user.svip.info.get/1.0.0";
+  static const get_person_message = Api.base_Url + "api/get_person_message/1.0.1";
+  static const user_svip_info = Api.base_Url + "third/xiaoe_request/xe.user.svip.info.get/1.0.0";
 
 
   // 课程模块
-  static const shop_page = "third/xiaoe_request/xe.shop.page.get/1.0.1";
+  static const shop_page = Api.base_Url + "third/xiaoe_request/xe.shop.page.get/1.0.1";
 
 
 }

@@ -22,3 +22,13 @@ samples, guidance on mobile development, and a full API reference.
 - 设置Column的宽度为全屏:  可以设置一个子视图的宽度为全屏来撑开
 
 - dart文件命名不能是驼峰命名方式, 会导致索引不到
+
+## 在json文件夹下生产Model
+
+- cd jsons
+
+- flutter packages pub run json_model
+
+- cd lib
+
+- flutter packages pub run build_runner build

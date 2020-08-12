@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../Utils/navigation_utils.dart';
-import '../../service/login_service.dart';
 
 // 搜索组件
 class SearchView extends StatelessWidget {
