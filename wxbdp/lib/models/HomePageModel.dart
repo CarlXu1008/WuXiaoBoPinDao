@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-
+import "homeComponentModel.dart";
 part 'HomePageModel.g.dart';
 
 @JsonSerializable()
@@ -9,7 +9,7 @@ class HomePageModel {
     num micro_page_id;
     bool is_homepage;
     String page_title;
-    List components;
+    List<HomeComponentModel> components;
     Map<String,dynamic> navigation;
     String seo_info;
     Map<String,dynamic> theme;
